@@ -4,7 +4,7 @@ metadata:
   name: retail-store-cart
   namespace: argocd
   annotations:
-    argocd.argoproj.io/sync-wave: "1" #this controls deployment order if db is 0, backend is 1 and frontend is 2 then 
+    argocd.argoproj.io/sync-wave: "1" #this controls deployment order if db is 0, backend is 1 and frontend is 2 then resources will create in order and incase all the annotaions are set 1 for all apps in that case they are created in parallel
 spec:
   project: retail-store
   source:
