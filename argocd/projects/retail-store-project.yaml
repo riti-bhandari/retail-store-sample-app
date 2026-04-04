@@ -9,9 +9,9 @@ spec:
   sourceRepos:
     - 'https://github.com/LondheShubham153/retail-store-sample-app'
   
-  destinations:
+  destinations:                                        
     - namespace: retail-store
-      server: https://kubernetes.default.svc
+      server: https://kubernetes.default.svc    #this tells argo to deploy to your own cluster, meaning where argoCD is installed deploy the app in the same place
   
   clusterResourceWhitelist:
     - group: ''
