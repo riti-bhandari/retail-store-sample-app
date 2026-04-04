@@ -7,7 +7,7 @@
 # =============================================================================
 
 module "vpc" {
-  source  = "terraform-aws-modules/vpc/aws"
+  source  = "terraform-aws-modules/vpc/aws"  #it uses pre built vpc module
   version = "~> 5.0"
 
   name = "${var.cluster_name}-vpc"
@@ -25,10 +25,10 @@ module "vpc" {
   create_igw = true
 
   # DNS configuration
-  enable_dns_hostnames = true
-  enable_dns_support   = true
+  enable_dns_hostnames = true #Aws provide a public hostname or domain name to the instances inside the VPC so that resources inside cluster can talk to each other and traffic from outside can reach internet facing instances using domain name(ec2-203-0-113-25.compute-1.amazonaws.com)
+  enable_dns_support   = true  #enable DNS resolution, it let VPC to use AWS default DNS server name AmazonProvidedDNS
 
-  # Manage default resources for better control
+  # Manage default resources for better control #here these nacl, route table and sg are creating by default when VPC gets created and terraform will manage it and ging tags to it here we are not creating  sg, nacl and route table using resource block
   manage_default_network_acl    = true
   default_network_acl_tags      = { Name = "${var.cluster_name}-default-nacl" }
   manage_default_route_table    = true
