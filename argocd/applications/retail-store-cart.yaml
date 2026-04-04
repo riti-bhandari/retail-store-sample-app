@@ -19,8 +19,8 @@ spec:
     server: https://kubernetes.default.svc
     namespace: retail-store
   syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
+    automated:          #it means argoCD will automatically picks the changes and deploy it
+      prune: true       # if something is deleted in git then argocd will delete it from cluster too
+      selfHeal: true    # if someone has done manual changes in cluster then ArgoCD will revert it back to the Git state
     syncOptions:
       - CreateNamespace=true 
