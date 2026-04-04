@@ -1,10 +1,10 @@
 name: Deploy
 
-on:
-  push:
+on:   #it tells when to run this flow, define triggers in this case there are 2 triggers: push and workflow_dispatch
+  push:  #trigger when there is any changes commit inside src folder
     branches: [gitops]
     paths: ['src/**']
-  workflow_dispatch:
+  workflow_dispatch:  #trigger workflow manually using button: GitHub → Actions → Deploy → Run workflow button
 
 env:
   AWS_REGION: ${{ secrets.AWS_REGION }}
