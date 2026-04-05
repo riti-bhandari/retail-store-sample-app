@@ -61,8 +61,8 @@ module "retail_app_eks" {
   enable_cluster_creator_admin_permissions = true
 
   # EKS Auto Mode configuration - simplified node management
-  cluster_compute_config = {
-    enabled    = true
+  cluster_compute_config = {  
+    enabled    = true  #turns on auto  mode enable 
     node_pools = ["general-purpose"]
   }
 
