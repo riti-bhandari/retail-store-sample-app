@@ -8,7 +8,7 @@ metadata:
 spec:
   project: retail-store #this connects to your appProject yaml inside argoCD/projects/retail-store-project.yaml
   source:
-    repoURL: https://github.com/LondheShubham153/retail-store-sample-app
+    repoURL: https://github.com/riti-bhandari/retail-store-sample-app/
     targetRevision: gitops
     path: src/cart/chart
     helm:
