@@ -1,4 +1,3 @@
-
 name: Deploy
 
 on:   #it tells when to run this flow, define triggers in this case there are 2 triggers: push and workflow_dispatch
