@@ -2,7 +2,7 @@
 
 <!-- GitOps Test: Testing deploy-simple.yml workflow -->
 
-<!-- Test commit 1234 -->
+<!-- Test commit qwert -->
 
 | Language | Persistence |
 | -------- | ----------- |
