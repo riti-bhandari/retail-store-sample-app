@@ -1,6 +1,6 @@
 # AWS Containers Retail Sample - Catalog Service
 
-<!-- Test commit 1234 -->
+<!-- Test commit oiuyt -->
 
 | Language | Persistence |
 | -------- | ----------- |
